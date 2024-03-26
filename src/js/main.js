@@ -28,6 +28,7 @@ function seleccionarTema(numero) {
 
 // Funcion para la calculadora
 function calculadora() {
+  const pantalla = document.querySelector(".pantalla");
   const siete = document.getElementById("7");
   const ocho = document.getElementById("8");
   const nueve = document.getElementById("9");
@@ -46,7 +47,6 @@ function calculadora() {
   const multiplicar = document.getElementById("mult");
   const resetear = document.getElementById("reset");
   const total = document.getElementById("total");
-  const pantalla = document.querySelector(".pantalla");
 
   siete.addEventListener("click", function () {
     pantalla.innerText += "7";
@@ -95,7 +95,7 @@ function calculadora() {
     pantalla.innerText += "/";
   });
   multiplicar.addEventListener("click", function () {
-    pantalla.innerText += "x";
+    pantalla.innerText += "*";
   });
   resetear.addEventListener("click", function () {
     pantalla.innerText = "";
@@ -103,23 +103,14 @@ function calculadora() {
   total.addEventListener("click", function () {
     let expresion = pantalla.innerText;
     let resultado;
-
-    // Verificar si la expresión contiene un signo de suma, resta, multiplicación o división
-    if (expresion.includes("+")) {
-      let numeros = expresion.split("+");
-      resultado = parseFloat(numeros[0]) + parseFloat(numeros[1]) + parseFloat(numeros[2]) + parseFloat(numeros[3]);
-    } else if (expresion.includes("-")) {
-      let numeros = expresion.split("-");
-      resultado = parseFloat(numeros[0]) - parseFloat(numeros[1]) - parseFloat(numeros[2]) - parseFloat(numeros[3]);
-    } else if (expresion.includes("x")) {
-      let numeros = expresion.split("x");
-      resultado = parseFloat(numeros[0]) * parseFloat(numeros[1]) * parseFloat(numeros[2]) * parseFloat(numeros[3]);
-    } else if (expresion.includes("/")) {
-      let numeros = expresion.split("/");
-      resultado = parseFloat(numeros[0]) / parseFloat(numeros[1]) / parseFloat(numeros[2]) / parseFloat(numeros[3]);
+    try {
+      resultado = eval(expresion); // Evalúa la expresión matemática
+      pantalla.innerText = resultado; // Muestra el resultado en la pantalla
+    } catch (error) {
+      pantalla.innerText = "Error"; // Maneja errores en la expresión
     }
-
-    pantalla.innerText = resultado; // Muestra el resultado en la pantalla
   });
 }
+
+// Inicializar la calculadora
 calculadora();
