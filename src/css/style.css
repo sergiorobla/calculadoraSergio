@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+main {
+  margin-top: 10%;
+}
+
+/* Theme 1 */
+.calculadora {
+  margin: 0 auto;
+  width: 300px;
+  height: 390px;
+  background-color: #394666;
+  border-radius: 5px;
+}
+.temas {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+.theme {
+  display: flex;
+  gap: 10px;
+}
+#titletheme {
+  margin-top: 17px;
+  font-size: 12px;
+}
+.theme div {
+  margin-top: 5px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.circulo {
+  width: 10px;
+  height: 10px;
+  background-color: #af3328;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  position: relative;
+  left: -53px;
+  top: 5px;
+}
+#fondo {
+  background-color: #192033;
+  width: 50px;
+  height: 13px;
+  position: absolute;
+  top: 196px;
+  left: 1025px;
+  border-radius: 10px;
+}
+.pantalla {
+  background-color: #192033;
+  margin: 0 auto;
+  width: 280px;
+  height: 70px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.botones {
+  background-color: #192033;
+  margin: 0 auto;
+  width: 280px;
+  height: 240px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.botones div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eae3db;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.botones div:hover {
+  background-color: #c2bdb6;
+}
+#reset,
+#total {
+  width: 110px;
+  height: 40px;
+}
+#reset,
+#del {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #647295;
+  color: white;
+}
+#reset:hover,
+#del:hover {
+  background-color: #4d5873;
+}
+#total {
+  font-size: 30px;
+  background-color: #d13f32;
+  color: white;
+}
+#total:hover {
+  background-color: #af3328;
+}
