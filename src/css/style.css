@@ -51,9 +51,9 @@ main {
   background-color: #192033;
   width: 50px;
   height: 13px;
-  position: absolute;
-  top: 65.5px;
-  left: 374px;
+  position: relative;
+  top: 3.5px;
+  left: 54.5px;
   border-radius: 10px;
 }
 .pantalla {
