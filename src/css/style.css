@@ -49,11 +49,11 @@ main {
 }
 #fondo {
   background-color: #192033;
-  width: 50px;
-  height: 13px;
+  width: 48px;
+  height: 12px;
   position: relative;
-  top: 3.5px;
-  left: 54.5px;
+  top: 4px;
+  left: 54px;
   border-radius: 10px;
 }
 .pantalla {
